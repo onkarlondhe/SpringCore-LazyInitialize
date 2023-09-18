@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="emp" class="com.mzos.Employee" autowire="byName" scope="prototype" lazy-init="false">
+ 	
+ 	<property name="empId" value="1"></property>
+ 	<property name="empName" value="Ram"></property>
+ 	<property name="empSal" value="50000"></property>
+ 	
+ 	</bean>
+ 	
+ 	<bean id="emp1" class="com.mzos.Employee" autowire="byName" lazy-init="false">
+ 	
+ 	<constructor-arg name="empId" value="1"></constructor-arg>
+ 	<constructor-arg name="empName" value="Ram"></constructor-arg>
+ 	<constructor-arg name="empSal" value="50000"></constructor-arg>
+ 	
+ 	</bean>
+ 	 
+ 	<bean id="studAddress" class="com.mzos.Address">
+ 	<property name="city" value="Solapur"></property>
+ 	<property name="state" value="Maharastra"></property>
+ 	<property name="pin" value="413410"></property>
+ 	
+ 	</bean>
+
+	 
+</beans>
